@@ -129,7 +129,6 @@ Route::group(['middleware' => 'admin', 'prefix' => '/admin'], function () {
         Route::post('/delete', [BookingController::class, 'delete'])->name('deleteBooking');
         Route::post('/search', [BookingController::class, 'search'])->name('searchBooking');
         Route::post('/changeStatus', [BookingController::class, 'changeStatus'])->name('changeStatusBooking');
-        Route::post('/create', [BookingController::class, 'create'])->name('createBooking');
     });
 
     Route::group(['prefix' => 'review'], function () {
@@ -148,6 +147,7 @@ Route::group(['middleware' => 'admin', 'prefix' => '/admin'], function () {
 });
 
 Route::get('/da-coc/{a}', [CheckoutController::class, 'daCoc'])->name('thanhToanThanhCong');
+Route::post('/create', [BookingController::class, 'create'])->name('createBooking');
 
 //  =============================================CLIENTS============================================================
 
